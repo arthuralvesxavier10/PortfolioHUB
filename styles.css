@@ -112,4 +112,15 @@ body.light .muted { color:#475569; }
   border-radius: 10px 0 0 10px;
   transition: width 1s ease-in-out;
 }
+.btn.instagram {
+  background-color: #E1306C;
+  color: white;
+  border: none;
+}
+
+.btn.instagram:hover {
+  background-color: #c2255c;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
 
