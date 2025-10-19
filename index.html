@@ -3,10 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PortfolioHUB — Arthur Alves Xavier</title>
+  <title>PortfolioHUB — Arthur Alves Xavier 💻</title>
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/223926738?v=4"> 
   <link rel="stylesheet" href="styles.css" />
   <meta name="description" content="Portfólio acadêmico e profissional — versionamento, documentação e site publicado com GitHub Pages.">
 </head>
+<script>
+  const btn = document.getElementById('modeToggle');
+  btn?.addEventListener('click', () => {
+    document.body.classList.toggle('light');
+    localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+  });
+  // restaura preferência
+  if(localStorage.getItem('theme') === 'light'){
+    document.body.classList.add('light');
+  }
+</script>
+
 <body>
   <header class="topbar">
     <h1 class="brand">PortfolioHUB</h1>
@@ -16,8 +29,11 @@
       <a href="#video">Vídeo</a>
       <a href="apresentacao/index.html">Apresentação</a>
       <a href="#contato">Contato</a>
+      <a href="projetos/index.html">Projetos</a>
+
     </nav>
   </header>
+<button id="modeToggle" class="btn ghost">🌙 Alternar tema</button>
 
   <main>
     <!-- HERO -->
@@ -36,11 +52,14 @@
       </div>
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="card">
-      <h3>Sobre o projeto</h3>
-      <p>O <strong>PortfolioHUB</strong> consolida meu aprendizado e prática em TI: versionamento com Git/GitHub, documentação técnica em PDF e um site público para apresentação dos resultados.</p>
-    </section>
+ <section id="status" class="card">
+  <h3>Status dos Serviços</h3>
+  <ul>
+    <li>🟢 GitHub Pages — Online</li>
+    <li>🟢 Documentação — Atualizada</li>
+    <li>🟢 JOIN (demo) — Operacional</li>
+  </ul>
+</section>
 
     <!-- PASTAS / LINKS DIRETOS -->
     <section id="projetos" class="card">
