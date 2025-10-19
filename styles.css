@@ -89,4 +89,27 @@ body.light .muted { color:#475569; }
   box-shadow: 0 6px 20px rgba(0,0,0,.25);
   flex: 0 0 auto;
 }
+.tech-status {
+  margin-top: 1em;
+}
+
+.progress-container {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 18px;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  height: 100%;
+  text-align: right;
+  padding-right: 6px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 10px 0 0 10px;
+  transition: width 1s ease-in-out;
+}
 
