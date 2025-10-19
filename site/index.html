@@ -3,69 +3,94 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PortfolioHUB — Arthur</title>
+  <title>PortfolioHUB — Arthur Alves Xavier</title>
   <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Portfólio acadêmico e profissional — versionamento, documentação e site publicado com GitHub Pages.">
 </head>
 <body>
   <header class="topbar">
-    <h1>PortfolioHUB</h1>
+    <h1 class="brand">PortfolioHUB</h1>
     <nav>
       <a href="#sobre">Sobre</a>
-      <a href="#projetos">Projetos</a>
+      <a href="#projetos">Pastas</a>
       <a href="#video">Vídeo</a>
+      <a href="apresentacao/index.html">Apresentação</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
   <main>
-    <section id="hero" class="card">
-      <h2>Olá, eu sou o Arthur</h2>
-      <p>Chefe do Núcleo de TI (apresentação pessoal). Este site faz parte de um trabalho acadêmico de versionamento e integração profissional.</p>
-      <div class="cta">
-        <a class="btn" href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank" rel="noopener">Meu LinkedIn</a>
-        <button id="themeToggle" class="btn outline">Alternar tema</button>
+    <!-- HERO -->
+    <section id="hero" class="card hero">
+      <div class="hero-text">
+        <h2>Arthur Alves Xavier</h2>
+        <p>Chefe do Núcleo de TI · Estudante de Engenharia de Software</p>
+        <p class="muted">Repositório público com projetos acadêmicos e pessoais, documentação institucional e site publicado via GitHub Pages.</p>
+        <div class="cta">
+          <a class="btn" href="https://github.com/arthuralvesxavier10/PortfolioHUB" target="_blank" rel="noopener">Ver repositório no GitHub</a>
+          <a class="btn outline" href="https://www.linkedin.com/in/arthur-alves-xavier-63360120b/" target="_blank" rel="noopener">Meu LinkedIn</a>
+          <a class="btn ghost" href="#video">Assistir no YouTube</a>
+        </div>
       </div>
     </section>
 
+    <!-- SOBRE -->
     <section id="sobre" class="card">
-      <h3>Sobre o PortfolioHUB</h3>
-      <p>Repositório com projetos acadêmicos e pessoais, organizado e publicado com GitHub Pages.</p>
-      <ul>
-        <li><strong>/academico</strong>: projetos e atividades da faculdade</li>
-        <li><strong>/pessoais</strong>: projetos e melhorias reais</li>
-        <li><strong>/docs</strong>: materiais de apoio</li>
-      </ul>
+      <h3>Sobre o projeto</h3>
+      <p>O <strong>PortfolioHUB</strong> consolida meu aprendizado e prática em TI: versionamento com Git/GitHub, documentação técnica em PDF e um site público para apresentação dos resultados.</p>
     </section>
 
+    <!-- PASTAS / LINKS DIRETOS -->
     <section id="projetos" class="card">
-      <h3>Infraestrutura — exemplos simples</h3>
+      <h3>Pastas principais</h3>
       <ul class="grid">
         <li class="mini-card">
-          <h4>VLAN básica</h4>
-          <p>Segmentação lógica com planejamento de IPs.</p>
+          <h4>/academico</h4>
+          <p>Trabalhos e estudos da graduação.</p>
+          <a class="link" target="_blank" href="https://github.com/arthuralvesxavier10/PortfolioHUB/tree/main/academico">Abrir no GitHub →</a>
         </li>
         <li class="mini-card">
-          <h4>Backup essencial</h4>
-          <p>Checklist prático de rotina e restauração.</p>
+          <h4>/pessoais</h4>
+          <p>Projetos e automações reais (JOIN, scripts, inventário).</p>
+          <a class="link" target="_blank" href="https://github.com/arthuralvesxavier10/PortfolioHUB/tree/main/pessoais">Abrir no GitHub →</a>
+        </li>
+        <li class="mini-card">
+          <h4>/docs</h4>
+          <p>Documentos institucionais (PDFs).</p>
+          <a class="link" target="_blank" href="https://github.com/arthuralvesxavier10/PortfolioHUB/tree/main/docs">Abrir no GitHub →</a>
+        </li>
+        <li class="mini-card">
+          <h4>/apresentacao</h4>
+          <p>Página pessoal com foto e resumo.</p>
+          <a class="link" target="_blank" href="apresentacao/index.html">Abrir a página →</a>
         </li>
       </ul>
     </section>
 
+    <!-- VIDEO -->
     <section id="video" class="card">
-      <h3>Apresentação (YouTube)</h3>
+      <h3>Vídeo de apresentação (YouTube)</h3>
       <div class="video-wrap">
+        <!-- Troque apenas o ID abaixo quando subir o seu vídeo -->
         <iframe
           src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
-          title="Apresentação PortfolioHUB"
+          title="Apresentação do PortfolioHUB"
           frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen></iframe>
       </div>
-      <p>Grave um vídeo curto (2–4 min) e substitua o <em>VIDEO_ID_AQUI</em>.</p>
+      <p class="muted">Dica: após publicar no YouTube, substitua <code>VIDEO_ID_AQUI</code> pela parte final do link. Ex.: https://youtu.be/<strong>abcd1234</strong></p>
     </section>
 
+    <!-- CONTATO -->
     <section id="contato" class="card">
       <h3>Contato</h3>
-      <p>Conecte-se pelo <a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank">LinkedIn</a>.</p>
+      <p>Quer falar comigo? Use os links abaixo:</p>
+      <div class="cta">
+        <a class="btn" href="mailto:arthuralvesxavier011@gmail.com">Enviar e-mail</a>
+        <a class="btn outline" href="https://www.linkedin.com/in/arthur-alves-xavier-63360120b/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/arthuralvesxavier10/PortfolioHUB" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </section>
   </main>
 
@@ -76,3 +101,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+    
