@@ -54,4 +54,19 @@ body.light .topbar nav a { color:#475569; }
 body.light .btn.outline { color:#0f172a; border-color:#94a3b8; }
 body.light .btn.ghost { color:#2563eb; border-color:#94a3b8; }
 body.light .muted { color:#475569; }
+.perfil-foto {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent, #6ea8fe);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: block;
+  margin: 0 auto 1rem auto;
+  transition: transform 0.3s ease;
+}
+
+.perfil-foto:hover {
+  transform: scale(1.05);
+}
 
