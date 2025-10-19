@@ -8,93 +8,42 @@
     body {
       background-color: #0b0d17;
       color: #fff;
-      font-family: "Segoe UI", sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      margin: 0;
-      overflow: hidden;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      display: flex; align-items: center; justify-content: center;
+      height: 100vh; margin: 0; text-align: center; overflow: hidden;
     }
-
     .welcome-box {
-      max-width: 600px;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 0 30px rgba(0, 123, 255, 0.3);
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(8px);
-      animation: fadeIn 2s ease;
+      max-width: 640px; padding: 2rem; border-radius: 16px;
+      background: rgba(255,255,255,.05); backdrop-filter: blur(8px);
+      box-shadow: 0 0 30px rgba(0,123,255,.28); animation: fadeIn 1.2s ease;
     }
-
-    h1 {
-      font-size: 1.8rem;
-      color: #61a0ff;
-      margin-bottom: 10px;
-    }
-
-    p {
-      margin: 5px 0;
-      font-size: 1rem;
-      opacity: 0.9;
-    }
-
-    .loading {
-      margin-top: 20px;
-      font-size: 0.9rem;
-      color: #aaa;
-      animation: blink 1.5s infinite;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 0.4; }
-      50% { opacity: 1; }
-    }
-
-    .progress-bar {
-      margin-top: 20px;
-      width: 80%;
-      height: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 5px;
-      overflow: hidden;
-      position: relative;
-      left: 10%;
-    }
-
-    .progress {
-      width: 0%;
-      height: 100%;
-      background: linear-gradient(90deg, #007bff, #00aaff);
-      animation: load 5s linear forwards;
-    }
-
-    @keyframes load {
-      from { width: 0%; }
-      to { width: 100%; }
-    }
+    h1 { font-size: 1.8rem; color: #61a0ff; margin: 0 0 .5rem; }
+    p { margin: .25rem 0; opacity: .9; }
+    .progress { margin: 1rem auto 0; width: 80%; height: 8px; background: rgba(255,255,255,.12); border-radius: 6px; overflow: hidden; }
+    .bar { width: 0%; height: 100%; background: linear-gradient(90deg,#007bff,#00aaff); animation: load 4.5s linear forwards; }
+    .hint { font-size: .9rem; color: #b8c0d4; margin-top: .75rem; }
+    .btn { display:inline-block; margin-top:1rem; padding:.6rem 1rem; border-radius:10px; background:#007bff; color:#fff; text-decoration:none; font-weight:600; }
+    .btn:hover { filter: brightness(1.05); }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes load { from{width:0%} to{width:100%} }
   </style>
 </head>
 <body>
   <div class="welcome-box">
     <h1>👋 Seja bem-vindo ao Portfólio de Arthur Alves Xavier</h1>
-    <p>Estudante de <strong>Engenharia de Software</strong></p>
-    <p><em>Centro Universitário de Brasília (UniCEUB)</em></p>
+    <p><strong>Engenharia de Software</strong> — UniCEUB</p>
     <p><strong>RA:</strong> 22551185</p>
-    <div class="progress-bar"><div class="progress"></div></div>
-    <p class="loading">Carregando portfólio...</p>
+
+    <div class="progress"><div class="bar"></div></div>
+    <p class="hint">Carregando portfólio…</p>
+
+    <!-- Link de fallback caso o redirecionamento automático falhe -->
+    <a class="btn" href="projetos/index.html">Entrar agora</a>
   </div>
 
   <script>
-    setTimeout(() => {
-      window.location.href = "site/index.html";
-    }, 5000); // redireciona em 5 segundos
+    // redireciona automaticamente após 5s
+    setTimeout(() => { window.location.href = "projetos/index.html"; }, 5000);
   </script>
 </body>
 </html>
