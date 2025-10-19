@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apresentação — Arthur Alves Xavier</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    :root {
+      --grad1: #0f172a;
+      --grad2: #1e293b;
+      --accent: #3b82f6;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+
+    body {
+      background: linear-gradient(160deg, var(--grad1), var(--grad2));
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #334155;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin: 0;
+    }
+
+    header nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      color: var(--text);
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 3rem 1rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+      box-shadow: 0 0 20px rgba(59,130,246,0.3);
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      color: var(--muted);
+      font-weight: 400;
+      margin-top: 0;
+    }
+
+    p {
+      max-width: 700px;
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .buttons a {
+      background: var(--accent);
+      color: #0f172a;
+      text-decoration: none;
+      padding: 0.7rem 1.3rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .buttons a:hover {
+      filter: brightness(1.1);
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 1rem;
+      border-top: 1px solid #334155;
+      font-size: 0.9rem;
+    }
+
+    .highlight {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PortfolioHUB</h1>
+    <nav>
+      <a href="../index.html#sobre">Sobre</a>
+      <a href="../index.html#projetos">Projetos</a>
+      <a href="../index.html#video">Vídeo</a>
+      <a href="../index.html#contato">Contato</a>
+      <a href="./index.html" class="highlight">Apresentação</a>
+    </nav>
+  </header>
+
+  <main>
+    <img class="profile-img" src="https://avatars.githubusercontent.com/u/223926738?v=4" alt="Arthur Alves Xavier">
+
+    <h2>Arthur Alves Xavier</h2>
+    <h3>Chefe do Núcleo de Tecnologia da Informação · Estudante de Engenharia de Software</h3>
+
+    <p>
+      Sou um profissional apaixonado por <strong>tecnologia, infraestrutura e inovação</strong>.  
+      Trabalho diariamente para transformar ambientes de TI em espaços mais organizados, seguros e eficientes —  
+      unindo a experiência prática da gestão pública com os fundamentos da engenharia de software.
+    </p>
+
+    <p>
+      O projeto <span class="highlight">PortfolioHUB</span> representa minha visão de como a TI pode ser aplicada com propósito:  
+      integrando <em>planejamento, automação, documentação e resultados reais</em>.  
+      Aqui estão as bases do que aplico no dia a dia — da rede ao servidor.
+    </p>
+
+    <div class="buttons">
+      <a href="mailto:arthuralvesxavier011@gmail.com">📧 E-mail</a>
+      <a href="https://www.linkedin.com/in/arthur-alves-xavier-63360120b/" target="_blank">💼 LinkedIn</a>
+      <a href="https://arthuralvesxavier10.github.io/PortfolioHUB/" target="_blank">🌐 Site Principal</a>
+    </div>
+  </main>
+
+  <footer>
+    <small>© <span id="year"></span> Arthur Alves Xavier — PortfolioHUB</small>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
