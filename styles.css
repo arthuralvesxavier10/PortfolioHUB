@@ -1,3 +1,14 @@
+body {
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #11172b, #151a2e);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 :root{
   --bg:#0f1320; --card:#151a2e; --text:#e9ecf1; --muted:#a8b2d1; --accent:#6ea8fe;
 }
