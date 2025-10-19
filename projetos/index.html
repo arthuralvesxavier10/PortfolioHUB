@@ -1,31 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projetos Reais — PortfolioHUB</title>
-  <link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem-vindo — Portfólio Arthur Alves Xavier</title>
+  <style>
+    body {
+      background-color: #0b0d17;
+      color: #fff;
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .welcome-box {
+      max-width: 600px;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0, 123, 255, 0.3);
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(8px);
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: #61a0ff;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 5px 0;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .loading {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    .progress-bar {
+      margin-top: 20px;
+      width: 80%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+      left: 10%;
+    }
+
+    .progress {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #007bff, #00aaff);
+      animation: load 5s linear forwards;
+    }
+
+    @keyframes load {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+  </style>
 </head>
 <body>
-  <header class="topbar">
-    <h1 class="brand">PortfolioHUB</h1>
-    <nav>
-      <a href="../index.html#sobre">Sobre</a>
-      <a href="../index.html#projetos">Pastas</a>
-      <a href="../apresentacao/index.html">Apresentação</a>
-    </nav>
-  </header>
-  <main>
-    <section class="card">
-      <h2>Projetos Reais</h2>
-      <ul>
-        <li><strong>JOIN System</strong> — Sistema interno com documentação em <a class="link" href="../docs/README.md">/docs</a>.</li>
-        <li><strong>Inventário Automatizado</strong> — Scripts de varredura e exportação CSV.</li>
-        <li><strong>Monitoramento de Rede</strong> — Ping, logs e alertas agendados.</li>
-      </ul>
-    </section>
-  </main>
-  <footer><small>© <span id="year"></span> Arthur Alves Xavier</small></footer>
-  <script src="../script.js"></script>
+  <div class="welcome-box">
+    <h1>👋 Seja bem-vindo ao Portfólio de Arthur Alves Xavier</h1>
+    <p>Estudante de <strong>Engenharia de Software</strong></p>
+    <p><em>Centro Universitário de Brasília (UniCEUB)</em></p>
+    <p><strong>RA:</strong> 22551185</p>
+    <div class="progress-bar"><div class="progress"></div></div>
+    <p class="loading">Carregando portfólio...</p>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "site/index.html";
+    }, 5000); // redireciona em 5 segundos
+  </script>
 </body>
 </html>
