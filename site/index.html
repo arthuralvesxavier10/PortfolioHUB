@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PortfolioHUB — Arthur</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>PortfolioHUB</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#video">Vídeo</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="card">
+      <h2>Olá, eu sou o Arthur</h2>
+      <p>Chefe do Núcleo de TI (apresentação pessoal). Este site faz parte de um trabalho acadêmico de versionamento e integração profissional.</p>
+      <div class="cta">
+        <a class="btn" href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank" rel="noopener">Meu LinkedIn</a>
+        <button id="themeToggle" class="btn outline">Alternar tema</button>
+      </div>
+    </section>
+
+    <section id="sobre" class="card">
+      <h3>Sobre o PortfolioHUB</h3>
+      <p>Repositório com projetos acadêmicos e pessoais, organizado e publicado com GitHub Pages.</p>
+      <ul>
+        <li><strong>/academico</strong>: projetos e atividades da faculdade</li>
+        <li><strong>/pessoais</strong>: projetos e melhorias reais</li>
+        <li><strong>/docs</strong>: materiais de apoio (manuais e comunicados)</li>
+      </ul>
+    </section>
+
+    <section id="projetos" class="card">
+      <h3>Infraestrutura — exemplos simples</h3>
+      <ul class="grid">
+        <li class="mini-card">
+          <h4>VLAN básica</h4>
+          <p>Segmentação lógica de rede com planejamento de IPs.</p>
+        </li>
+        <li class="mini-card">
+          <h4>Backup essencial</h4>
+          <p>Checklist prático de rotina de backups e restauração.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="video" class="card">
+      <h3>Apresentação (YouTube)</h3>
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
+          title="Apresentação PortfolioHUB"
+          frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+      <p>Grave um vídeo curto (2–4 min) apresentando o repositório e publique no YouTube.</p>
+    </section>
+
+    <section id="contato" class="card">
+      <h3>Contato</h3>
+      <p>Entre em contato pelo <a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank">LinkedIn</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <small>© <span id="year"></span> Arthur Alves Xavier — PortfolioHUB</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
