@@ -69,4 +69,24 @@ body.light .muted { color:#475569; }
 .perfil-foto:hover {
   transform: scale(1.05);
 }
+/* Layout do hero com imagem + texto */
+.hero-layout{
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+@media (max-width: 800px){
+  .hero-layout{ flex-direction: column; text-align: center; }
+}
+
+/* Foto de perfil */
+.perfil-foto{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent, #6ea8fe);
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  flex: 0 0 auto;
+}
 
