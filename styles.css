@@ -1,31 +1,24 @@
-/* ============================================
-   TEMA PRETO E BRANCO (LAYOUT MINIMALISTA)
-   ============================================ */
+/* ================================
+   🔥 TEMA PRETO + BRANCO PREMIUM
+   Estilo moderno, limpo e profissional
+   ================================ */
 
-/* Variáveis */
+/* Variáveis do tema */
 :root {
-  --bg: #ffffff;
-  --text: #000000;
-  --card: #f2f2f2;
-  --muted: #444;
-  --accent: #000000;
-}
-
-/* Tema escuro (ativado pelo botão) */
-body.dark {
-  --bg: #000000;
-  --text: #ffffff;
-  --card: #111111;
-  --muted: #cccccc;
-  --accent: #ffffff;
+  --bg: #0b0b0b;       /* preto suave */
+  --card: #111111;     /* preto elevado */
+  --card-border: #1f1f1f;
+  --text: #ffffff;     /* branco nítido */
+  --muted: #b5b5b5;    /* cinza suave */
+  --accent: #ffffff;   /* branco como destaque */
 }
 
 /* Corpo */
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 /* Topbar */
@@ -33,31 +26,25 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
+  padding: 1rem 1.25rem;
+  background: #0e0e0e;
+  border-bottom: 1px solid #1f1f1f;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.25rem;
-  background: var(--card);
-  border-bottom: 1px solid var(--text);
 }
 
 .topbar nav a {
-  color: var(--text);
+  color: var(--muted);
   text-decoration: none;
   margin-left: 1rem;
 }
 
 .topbar nav a:hover {
-  text-decoration: underline;
-}
-
-/* Títulos */
-h1, h2, h3, h4 {
   color: var(--text);
-  margin: 0 0 0.5rem 0;
 }
 
-/* Corpo principal */
+/* Layout */
 main {
   max-width: 1000px;
   margin: 2rem auto;
@@ -67,13 +54,16 @@ main {
 }
 
 /* Cards */
-.card {
+.card,
+.mini-card {
   background: var(--card);
   padding: 1.25rem;
-  border-radius: 12px;
-  border: 1px solid var(--text);
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
 }
 
+/* Texto secundário */
 .muted {
   color: var(--muted);
 }
@@ -85,52 +75,52 @@ main {
   gap: 1rem;
 }
 
-.mini-card {
-  background: var(--card);
-  border: 1px solid var(--text);
-  padding: 1rem;
-  border-radius: 12px;
+/* Mini-cards */
+.mini-card h4 {
+  margin: 0 0 .4rem 0;
+  color: var(--text);
 }
 
 /* Links */
-a.link, a {
+a, .link {
   color: var(--accent);
   text-decoration: none;
   font-weight: 600;
 }
 
 a:hover {
-  text-decoration: underline;
+  opacity: .7;
 }
 
 /* Botões */
 .btn {
-  border: 1px solid var(--text);
-  background: var(--text);
+  border: 1px solid var(--accent);
+  background: var(--accent);
   color: var(--bg);
-  padding: 0.7rem 1rem;
+  padding: .7rem 1rem;
   border-radius: 10px;
-  text-decoration: none;
+  cursor: pointer;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .btn.outline {
   background: transparent;
-  color: var(--text);
+  color: var(--accent);
 }
 
 .btn.ghost {
   background: transparent;
   border-style: dashed;
-  color: var(--text);
+  color: var(--accent);
 }
 
-/* Foto do perfil */
+/* Foto */
 .perfil-foto {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 3px solid var(--text);
+  border: 3px solid var(--accent);
   object-fit: cover;
   display: block;
   margin: 0 auto 1rem auto;
@@ -150,13 +140,14 @@ a:hover {
   }
 }
 
-/* Video */
+/* Vídeo */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
   background: #000;
   border-radius: 12px;
   overflow: hidden;
+  border: 1px solid #1f1f1f;
 }
 
 .video-container iframe {
@@ -167,16 +158,16 @@ a:hover {
 
 /* Barras de progresso */
 .progress-container {
-  background: #ddd;
+  background: #222;
   border-radius: 10px;
   overflow: hidden;
   height: 18px;
 }
 
 .progress-bar {
-  background: #000;
+  background: #fff;
+  color: #000;
   height: 100%;
-  color: #fff;
   padding-right: 6px;
   font-size: 12px;
   font-weight: bold;
