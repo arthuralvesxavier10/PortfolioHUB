@@ -1,3 +1,56 @@
+/* ======== TEMA PRETO E BRANCO ======== */
+
+body {
+  --bg-color: #ffffff;   /* fundo branco */
+  --text-color: #000000; /* texto preto */
+  --card-bg: #f5f5f5;    /* cinza bem claro */
+  --border-color: #00000023;
+  --accent-color: #000000; /* links e destaques */
+}
+
+/* Tema claro (se estiver usando sua alternância) */
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f5f5f5;
+  --border-color: #00000023;
+  --accent-color: #000000;
+}
+
+/* Tema escuro (também preto e branco, porém invertido) */
+body.dark, body:not(.light) {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --card-bg: #111111;
+  --border-color: #ffffff33;
+  --accent-color: #ffffff;
+}
+
+/* Aplicação das variáveis no layout */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.card,
+.mini-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+a,
+a.link,
+.btn,
+.btn.outline,
+.btn.ghost {
+  color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+}
+
+.progress-bar {
+  background: var(--accent-color) !important;
+}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
