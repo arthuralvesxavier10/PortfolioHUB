@@ -1,17 +1,17 @@
-/* ===========================
-   TEMA PRETO E BRANCO
-   =========================== */
+/* ============================================
+   TEMA PRETO E BRANCO (LAYOUT MINIMALISTA)
+   ============================================ */
 
-/* Paleta global */
+/* Variáveis */
 :root {
   --bg: #ffffff;
   --text: #000000;
   --card: #f2f2f2;
-  --muted: #555;
+  --muted: #444;
   --accent: #000000;
 }
 
-/* Tema escuro */
+/* Tema escuro (ativado pelo botão) */
 body.dark {
   --bg: #000000;
   --text: #ffffff;
@@ -20,7 +20,7 @@ body.dark {
   --accent: #ffffff;
 }
 
-/* Aplicação */
+/* Corpo */
 body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -28,26 +28,19 @@ body {
   color: var(--text);
 }
 
-/* Topo */
+/* Topbar */
 .topbar {
   position: sticky;
   top: 0;
   z-index: 10;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 1.25rem;
   background: var(--card);
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid var(--text);
 }
 
-.brand {
-  color: var(--accent);
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-/* Menu */
 .topbar nav a {
   color: var(--text);
   text-decoration: none;
@@ -58,13 +51,31 @@ body {
   text-decoration: underline;
 }
 
+/* Títulos */
+h1, h2, h3, h4 {
+  color: var(--text);
+  margin: 0 0 0.5rem 0;
+}
+
+/* Corpo principal */
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
 /* Cards */
-.card,
-.mini-card {
+.card {
   background: var(--card);
   padding: 1.25rem;
-  border: 1px solid #aaa;
   border-radius: 12px;
+  border: 1px solid var(--text);
+}
+
+.muted {
+  color: var(--muted);
 }
 
 /* Grid */
@@ -74,14 +85,15 @@ body {
   gap: 1rem;
 }
 
-/* Mini-card */
-.mini-card h4 {
-  margin: 0 0 .4rem 0;
+.mini-card {
+  background: var(--card);
+  border: 1px solid var(--text);
+  padding: 1rem;
+  border-radius: 12px;
 }
 
 /* Links */
-a,
-a.link {
+a.link, a {
   color: var(--accent);
   text-decoration: none;
   font-weight: 600;
@@ -93,34 +105,33 @@ a:hover {
 
 /* Botões */
 .btn {
-  border: 1px solid var(--accent);
-  background: var(--accent);
+  border: 1px solid var(--text);
+  background: var(--text);
   color: var(--bg);
-  padding: .7rem 1rem;
+  padding: 0.7rem 1rem;
   border-radius: 10px;
-  cursor: pointer;
   text-decoration: none;
   font-weight: 700;
 }
 
 .btn.outline {
   background: transparent;
-  color: var(--accent);
+  color: var(--text);
 }
 
 .btn.ghost {
   background: transparent;
   border-style: dashed;
-  color: var(--accent);
+  color: var(--text);
 }
 
-/* Foto */
+/* Foto do perfil */
 .perfil-foto {
   width: 160px;
   height: 160px;
   border-radius: 50%;
+  border: 3px solid var(--text);
   object-fit: cover;
-  border: 3px solid var(--accent);
   display: block;
   margin: 0 auto 1rem auto;
 }
@@ -143,10 +154,9 @@ a:hover {
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
-  width: 100%;
+  background: #000;
   border-radius: 12px;
   overflow: hidden;
-  background: #000;
 }
 
 .video-container iframe {
@@ -155,7 +165,7 @@ a:hover {
   height: 100%;
 }
 
-/* Progresso */
+/* Barras de progresso */
 .progress-container {
   background: #ddd;
   border-radius: 10px;
@@ -165,8 +175,8 @@ a:hover {
 
 .progress-bar {
   background: #000;
-  color: #fff;
   height: 100%;
+  color: #fff;
   padding-right: 6px;
   font-size: 12px;
   font-weight: bold;
@@ -178,66 +188,3 @@ footer {
   padding: 2rem 1rem;
   color: var(--muted);
 }
-/* ======== OVERRIDE PRETO E BRANCO (FORÇADO) ======== */
-
-body, html {
-  background: #ffffff !important;
-  color: #000000 !important;
-}
-
-/* Cards */
-.card, .mini-card {
-  background: #f4f4f4 !important;
-  border: 1px solid #000 !important;
-  color: #000 !important;
-}
-
-/* Topbar */
-.topbar {
-  background: #f4f4f4 !important;
-  border-bottom: 1px solid #000 !important;
-}
-
-/* Textos */
-h1, h2, h3, h4, p, span, small {
-  color: #000 !important;
-}
-
-/* Botões */
-.btn {
-  background: #000 !important;
-  color: #fff !important;
-  border: 1px solid #000 !important;
-}
-
-.btn.outline, .btn.ghost {
-  background: transparent !important;
-  color: #000 !important;
-  border: 1px solid #000 !important;
-}
-
-/* Links */
-a, .link {
-  color: #000 !important;
-}
-
-/* Foto */
-.perfil-foto {
-  border: 3px solid #000 !important;
-}
-
-/* Barras de progresso */
-.progress-container {
-  background: #e0e0e0 !important;
-}
-
-.progress-bar {
-  background: #000 !important;
-  color: #fff !important;
-}
-
-/* Vídeo */
-.video-container {
-  background: #000 !important;
-}
-
