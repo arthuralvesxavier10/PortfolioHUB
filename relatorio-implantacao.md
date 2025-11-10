@@ -1,23 +1,24 @@
-# 📘 Relatório de Implantação — PortfolioHUB  
-Autor: Arthur Alves Xavier  
-RA: 22551185  
-Curso: Engenharia de Software – UniCEUB  
+## ✅ Implantação em uma Plataforma Centralizada
 
----
+A implantação do PortfolioHUB foi realizada utilizando o GitHub como
+plataforma centralizada para organização e publicação dos projetos.
+O sistema foi disponibilizado publicamente através do GitHub Pages no link:
 
-# ✅ 1. Implantação do PortfolioHUB
+🔗 https://arthuralvesxavier10.github.io/PortfolioHUB/
 
-O PortfolioHUB foi implantado como uma plataforma digital centralizada para exibir e organizar projetos acadêmicos, pessoais e documentações institucionais.
+Essa URL funciona como uma plataforma única onde todos os meus
+projetos, documentos técnicos, PDFs, portfólios acadêmicos e conteúdos
+pessoais estão integrados e acessíveis de maneira padronizada.
 
-A implantação foi realizada utilizando:
+O GitHub foi escolhido como plataforma centralizada porque oferece:
 
-- **Git** para versionamento;
-- **GitHub** para hospedagem do código e controle de acesso;
-- **GitHub Pages** para publicar o site de forma gratuita e segura;
-- **Markdown e PDF** para documentação técnica.
+- Organização em pastas específicas (`/academico`, `/pessoais`, `/docs`)
+- Publicação automática do site via GitHub Pages
+- Versionamento completo dos arquivos com Git
+- Segurança através de histórico de commits e controle de acesso
+- Armazenamento de documentos técnicos em PDF
+- Acesso público controlado e seguro
+- Estrutura clara para navegação e exibição dos projetos
 
-A plataforma permite acesso público aos projetos por meio da URL:
-
-🔗 **https://arthuralvesxavier10.github.io/PortfolioHUB/**
-
-Toda a estrutura foi organizada em pastas padronizadas, garantindo clareza, segurança e facilidade de manutenção.
+Dessa forma, o PortfolioHUB cumpre o papel de concentrar e gerenciar
+todos os materiais em um único ambiente digital, atendendo ao objetivo do trabalho.
