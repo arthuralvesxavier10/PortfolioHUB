@@ -1,0 +1,12 @@
+# Arquivos temporários e logs
+*.log
+*.tmp
+.DS_Store
+
+# Dependências Node (se adicionar no futuro)
+node_modules/
+npm-debug.log
+
+# Sistema operacional
+Thumbs.db
+desktop.ini
